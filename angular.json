@@ -6,31 +6,31 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "shell": {
+    "ecom-shell": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/shell",
-      "sourceRoot": "projects/shell/src",
+      "root": "projects/ecom-shell",
+      "sourceRoot": "projects/ecom-shell/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "projects/shell/src/main.ts",
-            "tsConfig": "projects/shell/tsconfig.app.json",
+            "browser": "projects/ecom-shell/src/main.ts",
+            "tsConfig": "projects/ecom-shell/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/shell/public"
+                "input": "projects/ecom-shell/public"
               }
             ],
             "styles": [
-              "projects/shell/src/styles.scss"
+              "projects/ecom-shell/src/styles.scss"
             ]
           },
           "configurations": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "shell:build:production"
+              "buildTarget": "ecom-shell:build:production"
             },
             "development": {
-              "buildTarget": "shell:build:development"
+              "buildTarget": "ecom-shell:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,31 +74,31 @@
         }
       }
     },
-    "dash": {
+    "ecom-home": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/dash",
-      "sourceRoot": "projects/dash/src",
+      "root": "projects/ecom-home",
+      "sourceRoot": "projects/ecom-home/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "projects/dash/src/main.ts",
-            "tsConfig": "projects/dash/tsconfig.app.json",
+            "browser": "projects/ecom-home/src/main.ts",
+            "tsConfig": "projects/ecom-home/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/dash/public"
+                "input": "projects/ecom-home/public"
               }
             ],
             "styles": [
-              "projects/dash/src/styles.scss"
+              "projects/ecom-home/src/styles.scss"
             ]
           },
           "configurations": {
@@ -129,146 +129,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "dash:build:production"
+              "buildTarget": "ecom-home:build:production"
             },
             "development": {
-              "buildTarget": "dash:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular/build:unit-test"
-        }
-      }
-    },
-    "dashboard": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/dashboard",
-      "sourceRoot": "projects/dashboard/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "projects/dashboard/src/main.ts",
-            "tsConfig": "projects/dashboard/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/dashboard/public"
-              }
-            ],
-            "styles": [
-              "projects/dashboard/src/styles.scss"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "dashboard:build:production"
-            },
-            "development": {
-              "buildTarget": "dashboard:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular/build:unit-test"
-        }
-      }
-    },
-    "profile": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/profile",
-      "sourceRoot": "projects/profile/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "projects/profile/src/main.ts",
-            "tsConfig": "projects/profile/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/profile/public"
-              }
-            ],
-            "styles": [
-              "projects/profile/src/styles.scss"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "profile:build:production"
-            },
-            "development": {
-              "buildTarget": "profile:build:development"
+              "buildTarget": "ecom-home:build:development"
             }
           },
           "defaultConfiguration": "development"

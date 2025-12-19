@@ -24,28 +24,16 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/shell/tsconfig.app.json"
+      "path": "./projects/ecom-shell/tsconfig.app.json"
     },
     {
-      "path": "./projects/shell/tsconfig.spec.json"
+      "path": "./projects/ecom-shell/tsconfig.spec.json"
     },
     {
-      "path": "./projects/dash/tsconfig.app.json"
+      "path": "./projects/ecom-home/tsconfig.app.json"
     },
     {
-      "path": "./projects/dash/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/dashboard/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/dashboard/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/profile/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/profile/tsconfig.spec.json"
+      "path": "./projects/ecom-home/tsconfig.spec.json"
     }
   ]
 }
